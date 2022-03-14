@@ -1,0 +1,11 @@
+{
+	"name": "Accordion",
+	"version": "0.0.1",
+	"description": "Basic animated accordion",
+	"devDependencies": {
+		"three": "0.138.3"
+	},
+	"peerDependencies": {
+		"three": "0.138.3"
+	}
+}

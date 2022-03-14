@@ -1,0 +1,12 @@
+[
+	{
+		"name": "Accordion",
+		"version": "0.0.1",
+		"description": "Basic animated accordion"
+	},
+	{
+		"name": "Test",
+		"version": "0.0.1",
+		"description": "Random test component"
+	}
+]

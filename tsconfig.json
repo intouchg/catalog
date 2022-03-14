@@ -1,0 +1,13 @@
+{
+	"exclude": ["node_modules", "dist"],
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"jsx": "preserve",
+		"esModuleInterop": true,
+		"pretty": true,
+		"strict": true
+	}
+}
