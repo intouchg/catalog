@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 packages
 dist
+metadata.json
 .storybook
 .husky
 .babelrc

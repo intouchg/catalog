@@ -1,7 +1,7 @@
 {
 	"name": "@intouchg/catalog",
-	"version": "0.1.1",
-	"description": "CLI and Storybook for exploring and cloning React components",
+	"version": "0.1.2",
+	"description": "CLI and Storybook for exploring and downloading React components",
 	"repository": "https://github.com/intouchg/catalog",
 	"author": "Intouch Group",
 	"license": "MIT",
