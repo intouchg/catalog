@@ -4,6 +4,8 @@ CLI and Storybook for exploring and downloading React components
 
 ## Using the CLI
 
+The CLI allows downloading the source code of any component package in this monorepo. Every component package is expected to have a Storybook story file - so devs can browse the components in Storybook and use the CLI to download the source code in either TypeScript and JavaScript.
+
 ```sh
 npx @intouchg/catalog@latest PATH -c COMPONENT_NAME -b BRANCH_NAME -t
 ```
