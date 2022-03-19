@@ -1,11 +1,11 @@
 import { Canvas } from '@react-three/fiber'
-import { SDFShader as BaseSDFShader } from './SDFShader'
+import { SDFShader } from './SDFShader'
 import { OrthographicCamera } from '@react-three/drei'
 export default {
 	title: 'SDFShader',
-	component: BaseSDFShader,
+	component: SDFShader,
 }
-export const SDFShader = (args) => (
+export const Shader = (args) => (
 	<div
 		css={{
 			display: 'flex',
@@ -15,11 +15,11 @@ export const SDFShader = (args) => (
 	>
 		<Canvas dpr={1}>
 			<OrthographicCamera makeDefault args={[-1, 1, 1, -1, 0, 1]} />
-			<BaseSDFShader {...args} />
+			<SDFShader {...args} />
 		</Canvas>
 	</div>
 )
-SDFShader.args = {
+Shader.args = {
 	steps: 64,
 	surface: 0.5,
 	sphereRadius: 1,
@@ -39,7 +39,7 @@ SDFShader.args = {
 	greenMultiplier: 0.95,
 	blueMultiplier: 0.45,
 }
-SDFShader.argTypes = {
+Shader.argTypes = {
 	steps: {
 		control: { type: 'range', min: 0, max: 64, step: 1 },
 	},

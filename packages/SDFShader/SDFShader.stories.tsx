@@ -1,14 +1,14 @@
 import { Canvas } from '@react-three/fiber'
-import { SDFShader as BaseSDFShader } from './SDFShader'
+import { SDFShader } from './SDFShader'
 import { OrthographicCamera } from '@react-three/drei'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
 	title: 'SDFShader',
-	component: BaseSDFShader,
-} as ComponentMeta<typeof BaseSDFShader>
+	component: SDFShader,
+} as ComponentMeta<typeof SDFShader>
 
-export const SDFShader: ComponentStory<typeof BaseSDFShader> = (args) => (
+export const Shader: ComponentStory<typeof SDFShader> = (args) => (
 	<div
 		css={{
 			display: 'flex',
@@ -18,12 +18,12 @@ export const SDFShader: ComponentStory<typeof BaseSDFShader> = (args) => (
 	>
 		<Canvas dpr={1}>
 			<OrthographicCamera makeDefault args={[-1, 1, 1, -1, 0, 1]} />
-			<BaseSDFShader {...args} />
+			<SDFShader {...args} />
 		</Canvas>
 	</div>
 )
 
-SDFShader.args = {
+Shader.args = {
 	steps: 64,
 	surface: 0.5,
 	sphereRadius: 1,
@@ -44,7 +44,7 @@ SDFShader.args = {
 	blueMultiplier: 0.45,
 }
 
-SDFShader.argTypes = {
+Shader.argTypes = {
 	steps: {
 		control: { type: 'range', min: 0, max: 64, step: 1 },
 	},

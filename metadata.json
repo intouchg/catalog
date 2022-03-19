@@ -5,6 +5,11 @@
 		"description": "Basic animated accordion"
 	},
 	{
+		"name": "RichText",
+		"version": "0.0.1",
+		"description": "Rich text editor using @tiptap/react"
+	},
+	{
 		"name": "SDFShader",
 		"version": "0.0.1",
 		"description": "WebGL shader using signed distance functions for raymarching"

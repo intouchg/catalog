@@ -5,10 +5,10 @@ const TabTitle = ({ id, ...props }) => {
 		<button
 			onClick={toggleActive}
 			css={{
-				marginRight: '1rem',
+				marginRight: 16,
 				color: 'white',
 				background: 'royalblue',
-				border: '0',
+				border: 0,
 				transform: `scale3d(${active ? '1.2, 1.2, 1.2' : '1, 1, 1'})`,
 				transition: 'all 200ms ease-out',
 			}}
@@ -17,7 +17,7 @@ const TabTitle = ({ id, ...props }) => {
 				{...props}
 				css={{
 					display: 'block',
-					padding: '0.5rem 1rem',
+					padding: 12,
 					textAlign: 'left',
 				}}
 			/>

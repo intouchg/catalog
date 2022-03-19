@@ -19,7 +19,7 @@ const AccordionContent = ({
 			}}
 		>
 			<div ref={ref}>
-				<div {...props} css={{ padding: '1rem' }} />
+				<div {...props} css={{ padding: 16 }} />
 			</div>
 		</animated.div>
 	)

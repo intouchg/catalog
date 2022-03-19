@@ -13,8 +13,8 @@ export const parameters = {
 export const decorators = [
 	(Story) => (
 		<>
-			<Global reset />
-			<div style={{ margin: '2rem' }}>
+			<Global reset style={{ body: { fontFamily: 'sans-serif' } }} />
+			<div style={{ margin: 32 }}>
 				<Story />
 			</div>
 		</>

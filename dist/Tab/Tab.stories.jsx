@@ -5,9 +5,9 @@ export default {
 	component: Trigger,
 }
 export const Tab = (args) => (
-	<div css={{ padding: '1rem', maxWidth: 800 }}>
+	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
-			<div css={{ marginBottom: '1rem' }}>
+			<div css={{ marginBottom: 16 }}>
 				<TabTitle id="1">Tab 1</TabTitle>
 				<TabTitle id="2">Tab 2</TabTitle>
 				<TabTitle id="3">Tab 3</TabTitle>

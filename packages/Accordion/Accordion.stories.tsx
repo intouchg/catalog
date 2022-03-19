@@ -12,7 +12,7 @@ export default {
 } as ComponentMeta<typeof Trigger>
 
 export const Accordion: ComponentStory<typeof Trigger> = (args) => (
-	<div css={{ padding: '1rem', maxWidth: 800 }}>
+	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<AccordionContainer id="1">
 				<AccordionTitle>Lorem ipsum dolor sit amet?</AccordionTitle>

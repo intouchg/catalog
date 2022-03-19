@@ -1,0 +1,21 @@
+{
+	"name": "RichText",
+	"version": "0.0.1",
+	"description": "Rich text editor using @tiptap/react",
+	"devDependencies": {
+		"@tiptap/core": "2.0.0-beta.174",
+		"@tiptap/extension-subscript": "2.0.0-beta.10",
+		"@tiptap/extension-superscript": "2.0.0-beta.10",
+		"@tiptap/extension-underline": "2.0.0-beta.23",
+		"@tiptap/react": "2.0.0-beta.108",
+		"@tiptap/starter-kit": "2.0.0-beta.183"
+	},
+	"peerDependencies": {
+		"@tiptap/core": "2.0.0-beta.174",
+		"@tiptap/extension-subscript": "2.0.0-beta.10",
+		"@tiptap/extension-superscript": "2.0.0-beta.10",
+		"@tiptap/extension-underline": "2.0.0-beta.23",
+		"@tiptap/react": "2.0.0-beta.108",
+		"@tiptap/starter-kit": "2.0.0-beta.183"
+	}
+}

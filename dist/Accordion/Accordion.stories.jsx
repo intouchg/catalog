@@ -9,7 +9,7 @@ export default {
 	component: Trigger,
 }
 export const Accordion = (args) => (
-	<div css={{ padding: '1rem', maxWidth: 800 }}>
+	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<AccordionContainer id="1">
 				<AccordionTitle>Lorem ipsum dolor sit amet?</AccordionTitle>
