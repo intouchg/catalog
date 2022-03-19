@@ -1,10 +1,22 @@
-import styled from 'styled-components'
-const AccordionContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	background-color: white;
-	border: 2px solid grey;
-	border-radius: 8px;
-`
+import { Children, isValidElement, cloneElement } from 'react'
+const AccordionContainer = ({ id, children, ...props }) => (
+	<div
+		{...props}
+		css={{
+			display: 'flex',
+			flexDirection: 'column',
+			width: '100%',
+			marginBottom: 16,
+			background: 'white',
+			border: '3px solid royalblue',
+			borderRadius: 8,
+			overflow: 'hidden',
+		}}
+	>
+		{Children.toArray(children).map((child) => {
+			if (!isValidElement(child)) return child
+			return cloneElement(child, { id })
+		})}
+	</div>
+)
 export { AccordionContainer }

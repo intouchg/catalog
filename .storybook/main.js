@@ -13,4 +13,12 @@ module.exports = {
 		...options,
 		plugins: [...options.plugins, 'babel-plugin-styled-components'],
 	}),
+	webpackFinal: async (config, { configType }) => {
+		config.module.rules.push({
+			test: /\.(glsl|frag|vert)$/,
+			use: ['raw-loader'],
+		})
+
+		return config
+	},
 }

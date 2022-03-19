@@ -5,12 +5,8 @@ import { Apply, Checkbox } from '@intouchg/components'
 import styled, { css } from 'styled-components'
 
 export default {
-	title: 'Example/Test',
+	title: 'Test',
 	component: Test,
-	parameters: {
-		// More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
-		layout: 'fullscreen',
-	},
 } as ComponentMeta<typeof Test>
 
 const StyledTest = styled(Checkbox)<{ cssStyles: string }>`
@@ -20,7 +16,7 @@ const StyledTest = styled(Checkbox)<{ cssStyles: string }>`
 		`}
 `
 
-const Template: ComponentStory<typeof StyledTest> = (args) => (
+export const MainTest: ComponentStory<typeof StyledTest> = (args) => (
 	<div
 		css={`
 			display: flex;
@@ -41,8 +37,6 @@ const Template: ComponentStory<typeof StyledTest> = (args) => (
 		</Apply>
 	</div>
 )
-
-export const MainTest = Template.bind({})
 
 MainTest.args = {
 	cssStyles: `color: red;`,

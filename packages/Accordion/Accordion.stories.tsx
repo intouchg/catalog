@@ -1,37 +1,54 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
 import {
 	AccordionContainer,
 	AccordionTitle,
 	AccordionContent,
 } from './Accordion'
-import { Triggers } from '@intouchg/components'
+import { Trigger } from '@intouchg/components'
+import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
-	title: 'Example/Accordion',
-	component: Triggers,
-	parameters: {
-		// More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
-		layout: 'fullscreen',
-	},
-} as ComponentMeta<typeof Triggers>
+	title: 'Accordion',
+	component: Trigger,
+} as ComponentMeta<typeof Trigger>
 
-const Template: ComponentStory<typeof Triggers> = (args) => (
-	<Triggers {...args}>
-		<AccordionContainer>
-			<AccordionTitle id="1">Lorem ipsum dolor sit amet?</AccordionTitle>
-			<AccordionContent id="1">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent gravida sodales ante, in vulputate metus rutrum et.
-				Mauris sem lorem, sodales vel consectetur a, consectetur ut
-				nibh. Praesent vestibulum eros et libero feugiat mollis. Sed
-				finibus quam non tortor commodo, in egestas libero elementum.
-				Maecenas sit amet elit venenatis nisi consectetur faucibus.
-				Suspendisse eget sodales leo. Curabitur non egestas magna, ac
-				accumsan dui. Pellentesque porttitor euismod dui, et congue sem
-				tincidunt sed. Vivamus ac dapibus ex.
-			</AccordionContent>
-		</AccordionContainer>
-	</Triggers>
+export const Accordion: ComponentStory<typeof Trigger> = (args) => (
+	<div css={{ padding: '1rem', maxWidth: 800 }}>
+		<Trigger {...args}>
+			<AccordionContainer id="1">
+				<AccordionTitle>Lorem ipsum dolor sit amet?</AccordionTitle>
+				<AccordionContent>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Praesent gravida sodales ante, in vulputate metus rutrum et.
+					Mauris sem lorem, sodales vel consectetur a, consectetur ut
+					nibh. Praesent vestibulum eros et libero feugiat mollis.
+				</AccordionContent>
+			</AccordionContainer>
+
+			<AccordionContainer id="2">
+				<AccordionTitle>Lorem ipsum dolor sit amet?</AccordionTitle>
+				<AccordionContent>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Praesent gravida sodales ante, in vulputate metus rutrum et.
+					Mauris sem lorem, sodales vel consectetur a, consectetur ut
+					nibh. Praesent vestibulum eros et libero feugiat mollis.
+				</AccordionContent>
+			</AccordionContainer>
+
+			<AccordionContainer id="3">
+				<AccordionTitle>Lorem ipsum dolor sit amet?</AccordionTitle>
+				<AccordionContent>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Praesent gravida sodales ante, in vulputate metus rutrum et.
+					Mauris sem lorem, sodales vel consectetur a, consectetur ut
+					nibh. Praesent vestibulum eros et libero feugiat mollis.
+				</AccordionContent>
+			</AccordionContainer>
+		</Trigger>
+	</div>
 )
 
-export const MainTest = Template.bind({})
+Accordion.args = {
+	defaultActiveIds: ['1'],
+	allowMultiActive: true,
+	allowNoneActive: true,
+}

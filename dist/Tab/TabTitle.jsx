@@ -1,22 +1,27 @@
 import { useTrigger } from '@intouchg/components'
-const AccordionTitle = ({ id, ...props }) => {
+const TabTitle = ({ id, ...props }) => {
 	const { active, toggleActive } = useTrigger(id)
 	return (
 		<button
 			onClick={toggleActive}
-			css={{ border: '0', background: 'pink' }}
+			css={{
+				marginRight: '1rem',
+				color: 'white',
+				background: 'royalblue',
+				border: '0',
+				transform: `scale3d(${active ? '1.2, 1.2, 1.2' : '1, 1, 1'})`,
+				transition: 'all 200ms ease-out',
+			}}
 		>
 			<span
 				{...props}
 				css={{
 					display: 'block',
 					padding: '0.5rem 1rem',
-					transform: `translateX(${active ? 0 : 20}px)`,
-					transition: 'all 200ms ease-out',
 					textAlign: 'left',
 				}}
 			/>
 		</button>
 	)
 }
-export { AccordionTitle }
+export { TabTitle }

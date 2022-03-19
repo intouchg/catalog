@@ -1,7 +1,8 @@
 import { useSpring, animated } from 'react-spring'
-import { Trigger } from '@intouchg/components'
+import { useTrigger } from '@intouchg/components'
 import { useMeasure } from '@intouchg/hooks'
-const AnimatedContent = ({ active, ...props }) => {
+const AccordionContent = ({ id, ...props }) => {
+	const { active } = useTrigger(id)
 	const [ref, size] = useMeasure()
 	const styles = useSpring({ height: active ? size.height : 0 })
 	return (
@@ -12,13 +13,10 @@ const AnimatedContent = ({ active, ...props }) => {
 				...styles,
 			}}
 		>
-			<div ref={ref} {...props} />
+			<div ref={ref}>
+				<div {...props} css={{ padding: '1rem' }} />
+			</div>
 		</animated.div>
 	)
 }
-const AccordionContent = ({ id, ...props }) => (
-	<Trigger id={id}>
-		{({ active }) => <AnimatedContent active={active} {...props} />}
-	</Trigger>
-)
 export { AccordionContent }

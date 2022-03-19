@@ -5,6 +5,16 @@
 		"description": "Basic animated accordion"
 	},
 	{
+		"name": "SDFShader",
+		"version": "0.0.1",
+		"description": "WebGL shader using signed distance functions for raymarching"
+	},
+	{
+		"name": "Tab",
+		"version": "0.0.1",
+		"description": "Basic tabs"
+	},
+	{
 		"name": "Test",
 		"version": "0.0.1",
 		"description": "Random test component"
