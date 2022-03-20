@@ -8,7 +8,7 @@ export default {
 	title: 'Accordion',
 	component: Trigger,
 }
-export const Accordion = (args) => (
+export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<AccordionContainer id="1">
@@ -43,7 +43,8 @@ export const Accordion = (args) => (
 		</Trigger>
 	</div>
 )
-Accordion.args = {
+Story.storyName = 'Accordion'
+Story.args = {
 	defaultActiveIds: ['1'],
 	allowMultiActive: true,
 	allowNoneActive: true,

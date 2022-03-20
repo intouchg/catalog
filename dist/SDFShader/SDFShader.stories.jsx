@@ -2,10 +2,10 @@ import { Canvas } from '@react-three/fiber'
 import { SDFShader } from './SDFShader'
 import { OrthographicCamera } from '@react-three/drei'
 export default {
-	title: 'SDFShader',
+	title: 'WebGL/SDFShader',
 	component: SDFShader,
 }
-export const Shader = (args) => (
+export const Story = (args) => (
 	<div
 		css={{
 			display: 'flex',
@@ -19,7 +19,8 @@ export const Shader = (args) => (
 		</Canvas>
 	</div>
 )
-Shader.args = {
+Story.storyName = 'SDFShader'
+Story.args = {
 	steps: 64,
 	surface: 0.5,
 	sphereRadius: 1,
@@ -39,7 +40,7 @@ Shader.args = {
 	greenMultiplier: 0.95,
 	blueMultiplier: 0.45,
 }
-Shader.argTypes = {
+Story.argTypes = {
 	steps: {
 		control: { type: 'range', min: 0, max: 64, step: 1 },
 	},

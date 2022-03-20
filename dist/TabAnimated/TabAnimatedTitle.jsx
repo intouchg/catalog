@@ -1,18 +1,13 @@
 import { useTrigger } from '@intouchg/components'
-
-export const TabTitle = ({
-	id,
-	...props
-}: { id: string } & React.ComponentProps<'span'>) => {
+export const TabAnimatedTitle = ({ id, ...props }) => {
 	const { active, toggleActive } = useTrigger(id)
-
 	return (
 		<button
 			onClick={toggleActive}
 			css={{
 				marginRight: 16,
 				color: 'white',
-				background: 'royalblue',
+				background: 'coral',
 				border: 0,
 				transform: `scale3d(${active ? '1.2, 1.2, 1.2' : '1, 1, 1'})`,
 				transition: 'all 200ms ease-out',

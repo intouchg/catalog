@@ -8,12 +8,13 @@ import Subscript from '@tiptap/extension-subscript'
 import Superscript from '@tiptap/extension-superscript'
 import { RichTextMenu } from './RichTextMenu'
 const copyright = textInputRule({ find: /\(c\)$/, replace: '©' })
-const trademark = textInputRule({ find: /\(r\)$/, replace: '®' })
+const registered = textInputRule({ find: /\(r\)$/, replace: '®' })
+const trademark = textInputRule({ find: /\(t\)$/, replace: '™' })
 const pilcrow = textInputRule({ find: /\(p\)$/, replace: '¶' })
 const silcrow = textInputRule({ find: /\(s\)$/, replace: '§' })
 const CharacterShortcuts = Extension.create({
 	name: 'characterShortcuts',
-	addInputRules: () => [copyright, trademark, pilcrow, silcrow],
+	addInputRules: () => [copyright, registered, trademark, pilcrow, silcrow],
 })
 const EditorContainer = styled.div`
 	display: flex;
@@ -23,8 +24,6 @@ const EditorContainer = styled.div`
 		height: 160px;
 		padding: 20px;
 		border: 1px solid grey;
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
 		background-color: #f9f9f9;
 
 		${(props) =>
@@ -67,24 +66,29 @@ export const RichText = ({
 	editorRef,
 	...props
 }) => {
-	const editor = useEditor({
-		editable,
-		content: parseContent(initialValue),
-		extensions: [
-			StarterKit,
-			Underline,
-			Subscript,
-			Superscript,
-			CharacterShortcuts,
-		],
-		editorProps: {
-			attributes: { tabindex: !editable ? '-1' : undefined },
+	const editor = useEditor(
+		{
+			editable,
+			content: parseContent(initialValue),
+			extensions: [
+				StarterKit,
+				Underline,
+				Subscript,
+				Superscript,
+				CharacterShortcuts,
+			],
+			editorProps: {
+				attributes: { tabindex: !editable ? '-1' : undefined },
+			},
+			onUpdate: ({ editor }) => {
+				if (onChange)
+					onChange(
+						editor.isEmpty ? '' : JSON.stringify(editor.getJSON())
+					)
+			},
 		},
-		onUpdate: ({ editor }) => {
-			if (onChange)
-				onChange(editor.isEmpty ? '' : JSON.stringify(editor.getJSON()))
-		},
-	})
+		[editable]
+	)
 	useEffect(
 		() => void editor?.commands.setContent(parseContent(initialValue)),
 		[initialValue, editor]

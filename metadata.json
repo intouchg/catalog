@@ -5,6 +5,16 @@
 		"description": "Basic animated accordion"
 	},
 	{
+		"name": "Form",
+		"version": "0.0.1",
+		"description": "Basic native form"
+	},
+	{
+		"name": "NoisySphere",
+		"version": "0.0.1",
+		"description": "Displacing vertices on sphere geometry with perlin noise"
+	},
+	{
 		"name": "RichText",
 		"version": "0.0.1",
 		"description": "Rich text editor using @tiptap/react"
@@ -20,8 +30,8 @@
 		"description": "Basic tabs"
 	},
 	{
-		"name": "Test",
+		"name": "TabAnimated",
 		"version": "0.0.1",
-		"description": "Random test component"
+		"description": "Basic tabs with animated content"
 	}
 ]

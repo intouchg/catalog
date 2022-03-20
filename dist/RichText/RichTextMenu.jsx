@@ -10,8 +10,6 @@ export const RichTextMenu = ({ editor, onClear, ...props }) => {
 				background: '#ededed',
 				border: '1px solid grey',
 				borderTop: 0,
-				borderBottomLeftRadius: 8,
-				borderBottomRightRadius: 8,
 			}}
 			{...props}
 		>

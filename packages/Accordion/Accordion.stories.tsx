@@ -11,7 +11,7 @@ export default {
 	component: Trigger,
 } as ComponentMeta<typeof Trigger>
 
-export const Accordion: ComponentStory<typeof Trigger> = (args) => (
+export const Story: ComponentStory<typeof Trigger> = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<AccordionContainer id="1">
@@ -47,7 +47,9 @@ export const Accordion: ComponentStory<typeof Trigger> = (args) => (
 	</div>
 )
 
-Accordion.args = {
+Story.storyName = 'Accordion'
+
+Story.args = {
 	defaultActiveIds: ['1'],
 	allowMultiActive: true,
 	allowNoneActive: true,

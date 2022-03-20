@@ -4,7 +4,7 @@ export default {
 	title: 'Tab',
 	component: Trigger,
 }
-export const Tab = (args) => (
+export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<div css={{ marginBottom: 16 }}>
@@ -13,28 +13,26 @@ export const Tab = (args) => (
 				<TabTitle id="3">Tab 3</TabTitle>
 			</div>
 
-			<TabContent id="1">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent gravida sodales ante, in vulputate metus rutrum et.
-				Mauris sem lorem, sodales vel consectetur a, consectetur ut
-				nibh. Praesent vestibulum eros et libero feugiat mollis.
-			</TabContent>
-			<TabContent id="2">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent gravida sodales ante, in vulputate metus rutrum et.
-				Mauris sem lorem, sodales vel consectetur a, consectetur ut
-				nibh. Praesent vestibulum eros et libero feugiat mollis.
-			</TabContent>
-			<TabContent id="3">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent gravida sodales ante, in vulputate metus rutrum et.
-				Mauris sem lorem, sodales vel consectetur a, consectetur ut
-				nibh. Praesent vestibulum eros et libero feugiat mollis.
-			</TabContent>
+			<div css={{ maxWidth: 800, position: 'relative' }}>
+				<TabContent id="1">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore.
+				</TabContent>
+				<TabContent id="2">
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat.
+				</TabContent>
+				<TabContent id="3">
+					Duis aute irure dolor in reprehenderit in voluptate velit
+					esse cillum dolore eu fugiat nulla pariatur deserunt
+					laborum.
+				</TabContent>
+			</div>
 		</Trigger>
 	</div>
 )
-Tab.args = {
+Story.storyName = 'Tab'
+Story.args = {
 	defaultActiveIds: ['1'],
 	allowMultiActive: false,
 	allowNoneActive: false,

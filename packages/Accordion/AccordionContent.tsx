@@ -2,7 +2,7 @@ import { useSpring, animated } from 'react-spring'
 import { useTrigger } from '@intouchg/components'
 import { useMeasure } from '@intouchg/hooks'
 
-const AccordionContent = ({
+export const AccordionContent = ({
 	id,
 	...props
 }: { id?: string } & React.ComponentProps<'div'>) => {
@@ -24,5 +24,3 @@ const AccordionContent = ({
 		</animated.div>
 	)
 }
-
-export { AccordionContent }

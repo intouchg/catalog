@@ -1,6 +1,6 @@
 import { Children, isValidElement, cloneElement } from 'react'
 
-const AccordionContainer = ({
+export const AccordionContainer = ({
 	id,
 	children,
 	...props
@@ -24,5 +24,3 @@ const AccordionContainer = ({
 		})}
 	</div>
 )
-
-export { AccordionContainer }

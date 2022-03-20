@@ -68,7 +68,7 @@ export const SDFShader = ({
 	})
 	return (
 		<mesh>
-			<planeBufferGeometry args={[2, 2]} />
+			<planeGeometry args={[2, 2]} />
 			<shaderMaterial
 				uniforms={uniformsRef.current}
 				vertexShader={vertexShader}

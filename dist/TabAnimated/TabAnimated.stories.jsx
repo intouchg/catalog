@@ -1,42 +1,37 @@
-import { TabTitle, TabContent } from './Tab'
+import { TabAnimatedTitle, TabAnimatedContent } from './TabAnimated'
 import { Trigger } from '@intouchg/components'
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
-
 export default {
-	title: 'Tab',
+	title: 'TabAnimated',
 	component: Trigger,
-} as ComponentMeta<typeof Trigger>
-
-export const Story: ComponentStory<typeof Trigger> = (args) => (
+}
+export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>
 		<Trigger {...args}>
 			<div css={{ marginBottom: 16 }}>
-				<TabTitle id="1">Tab 1</TabTitle>
-				<TabTitle id="2">Tab 2</TabTitle>
-				<TabTitle id="3">Tab 3</TabTitle>
+				<TabAnimatedTitle id="1">Tab 1</TabAnimatedTitle>
+				<TabAnimatedTitle id="2">Tab 2</TabAnimatedTitle>
+				<TabAnimatedTitle id="3">Tab 3</TabAnimatedTitle>
 			</div>
 
 			<div css={{ maxWidth: 800, position: 'relative' }}>
-				<TabContent id="1">
+				<TabAnimatedContent id="1">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 					do eiusmod tempor incididunt ut labore et dolore.
-				</TabContent>
-				<TabContent id="2">
+				</TabAnimatedContent>
+				<TabAnimatedContent id="2">
 					Ut enim ad minim veniam, quis nostrud exercitation ullamco
 					laboris nisi ut aliquip ex ea commodo consequat.
-				</TabContent>
-				<TabContent id="3">
+				</TabAnimatedContent>
+				<TabAnimatedContent id="3">
 					Duis aute irure dolor in reprehenderit in voluptate velit
 					esse cillum dolore eu fugiat nulla pariatur deserunt
 					laborum.
-				</TabContent>
+				</TabAnimatedContent>
 			</div>
 		</Trigger>
 	</div>
 )
-
-Story.storyName = 'Tab'
-
+Story.storyName = 'TabAnimated'
 Story.args = {
 	defaultActiveIds: ['1'],
 	allowMultiActive: false,

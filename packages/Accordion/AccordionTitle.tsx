@@ -1,6 +1,6 @@
 import { useTrigger } from '@intouchg/components'
 
-const AccordionTitle = ({
+export const AccordionTitle = ({
 	id,
 	...props
 }: { id?: string } & React.ComponentProps<'span'>) => {
@@ -21,4 +21,3 @@ const AccordionTitle = ({
 		</button>
 	)
 }
-export { AccordionTitle }

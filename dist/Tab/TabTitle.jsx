@@ -1,5 +1,5 @@
 import { useTrigger } from '@intouchg/components'
-const TabTitle = ({ id, ...props }) => {
+export const TabTitle = ({ id, ...props }) => {
 	const { active, toggleActive } = useTrigger(id)
 	return (
 		<button
@@ -24,4 +24,3 @@ const TabTitle = ({ id, ...props }) => {
 		</button>
 	)
 }
-export { TabTitle }

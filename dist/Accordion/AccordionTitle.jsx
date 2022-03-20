@@ -1,5 +1,5 @@
 import { useTrigger } from '@intouchg/components'
-const AccordionTitle = ({ id, ...props }) => {
+export const AccordionTitle = ({ id, ...props }) => {
 	const { active, toggleActive } = useTrigger(id)
 	return (
 		<button onClick={toggleActive} css={{ border: 0, background: 'pink' }}>
@@ -16,4 +16,3 @@ const AccordionTitle = ({ id, ...props }) => {
 		</button>
 	)
 }
-export { AccordionTitle }
