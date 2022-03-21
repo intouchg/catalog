@@ -6,8 +6,117 @@ import StarterKit from '@tiptap/starter-kit'
 import Underline from '@tiptap/extension-underline'
 import Subscript from '@tiptap/extension-subscript'
 import Superscript from '@tiptap/extension-superscript'
-import { RichTextMenu } from './RichTextMenu'
 import type { Editor, PureEditorContent } from '@tiptap/react'
+
+export const RichTextMenuButton = ({
+	active,
+	...props
+}: { active: boolean } & React.ComponentProps<'button'>) => (
+	<button
+		css={{
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			width: 32,
+			height: 32,
+			padding: 8,
+			marginRight: 12,
+			background: active ? 'orange' : 'transparent',
+			border: '1px solid grey',
+		}}
+		{...props}
+	/>
+)
+
+export const RichTextMenu = ({
+	editor,
+	onClear,
+	...props
+}: {
+	editor: Editor | null
+	onClear?: () => void
+} & React.ComponentProps<'div'>) => {
+	if (!editor) return null
+
+	return (
+		<div
+			css={{
+				display: 'flex',
+				padding: '8px 20px',
+				overflow: 'hidden',
+				background: '#ededed',
+				border: '1px solid grey',
+				borderTop: 0,
+			}}
+			{...props}
+		>
+			<RichTextMenuButton
+				css={{ fontWeight: 'bold' }}
+				active={editor.isActive('bold')}
+				onClick={() => editor.chain().focus().toggleBold().run()}
+			>
+				B
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				css={{ fontSize: 20, fontStyle: 'italic', fontFamily: 'serif' }}
+				active={editor.isActive('italic')}
+				onClick={() => editor.chain().focus().toggleItalic().run()}
+			>
+				I
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				css={{ textDecoration: 'underline' }}
+				active={editor.isActive('underline')}
+				onClick={() => editor.chain().focus().toggleUnderline().run()}
+			>
+				U
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				active={editor.isActive('subscript')}
+				onClick={() =>
+					editor
+						.chain()
+						.focus()
+						.unsetSuperscript()
+						.toggleSubscript()
+						.run()
+				}
+			>
+				X<sub css={{ marginTop: 6 }}>2</sub>
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				active={editor.isActive('superscript')}
+				onClick={() =>
+					editor
+						.chain()
+						.focus()
+						.unsetSubscript()
+						.toggleSuperscript()
+						.run()
+				}
+			>
+				X<sup css={{ marginBottom: 6 }}>2</sup>
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				css={{ fontSize: 22, fontWeight: 'bold' }}
+				active={editor.isActive('bulletList')}
+				onClick={() => editor.chain().focus().toggleBulletList().run()}
+			>
+				⋮
+			</RichTextMenuButton>
+			<RichTextMenuButton
+				css={{ width: 'auto', marginLeft: 'auto', marginRight: 0 }}
+				active={false}
+				onClick={() => {
+					editor.chain().clearContent().run()
+					if (onClear) onClear()
+				}}
+			>
+				Reset
+			</RichTextMenuButton>
+		</div>
+	)
+}
 
 const copyright = textInputRule({ find: /\(c\)$/, replace: '©' })
 const registered = textInputRule({ find: /\(r\)$/, replace: '®' })
@@ -125,5 +234,3 @@ export const RichText = ({
 		</div>
 	)
 }
-
-export default RichText

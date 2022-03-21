@@ -12,7 +12,7 @@ const useDragConstraint = (child) => {
 		pivotB: [0.3, 0.3, 0.3],
 		maxForce: 1,
 	})
-	useEffect(() => void api.disable(), [])
+	useEffect(() => void api.disable(), [api])
 	const onPointerUp = useCallback(
 		(e) => {
 			e.target.releasePointerCapture(e.pointerId)

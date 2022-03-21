@@ -1,5 +1,4 @@
 import { VideoPlayer } from './VideoPlayer'
-import './video-js.min.css'
 export default {
 	title: 'VideoPlayer',
 	component: VideoPlayer,

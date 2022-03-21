@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import fragmentShader from './frag.glsl'
-import vertexShader from './vert.glsl'
+import fragmentShader from './fragment-shader.glsl'
+import vertexShader from './vertex-shader.glsl'
 
 export const SDFShader = ({
 	steps = 64,

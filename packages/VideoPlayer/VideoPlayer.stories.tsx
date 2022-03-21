@@ -1,5 +1,4 @@
 import { VideoPlayer } from './VideoPlayer'
-import './video-js.min.css'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {

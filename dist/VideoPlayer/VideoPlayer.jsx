@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
+import './video-js-7.18.1.min.css'
 export const VideoPlayer = ({
 	className,
 	poster,
