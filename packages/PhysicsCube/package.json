@@ -1,0 +1,18 @@
+{
+	"name": "PhysicsCube",
+	"version": "0.0.1",
+	"description": "Interactive physics with use-cannon",
+	"devDependencies": {
+		"@react-three/cannon": "5.1.0",
+		"@react-three/drei": "8.18.1",
+		"@react-three/fiber": "7.0.26",
+		"@types/three": "0.138.0",
+		"three": "0.138.3"
+	},
+	"peerDependencies": {
+		"@react-three/cannon": "5.1.0",
+		"@react-three/drei": "8.18.1",
+		"@react-three/fiber": "7.0.26",
+		"three": "0.138.3"
+	}
+}

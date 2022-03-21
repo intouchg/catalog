@@ -2,17 +2,22 @@
 	{
 		"name": "Accordion",
 		"version": "0.0.1",
-		"description": "Basic animated accordion"
+		"description": "Animated accordion"
 	},
 	{
 		"name": "Form",
 		"version": "0.0.1",
-		"description": "Basic native form"
+		"description": "Native form"
 	},
 	{
 		"name": "NoisySphere",
 		"version": "0.0.1",
 		"description": "Displacing vertices on sphere geometry with perlin noise"
+	},
+	{
+		"name": "PhysicsCube",
+		"version": "0.0.1",
+		"description": "Interactive physics with use-cannon"
 	},
 	{
 		"name": "RichText",
@@ -27,11 +32,11 @@
 	{
 		"name": "Tab",
 		"version": "0.0.1",
-		"description": "Basic tabs"
+		"description": "Tabs"
 	},
 	{
 		"name": "TabAnimated",
 		"version": "0.0.1",
-		"description": "Basic tabs with animated content"
+		"description": "Tabs with animated content"
 	}
 ]

@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { SDFShader } from './SDFShader'
 import { OrthographicCamera } from '@react-three/drei'
+const OrthoCamera = OrthographicCamera
 export default {
 	title: 'WebGL/SDFShader',
 	component: SDFShader,
@@ -14,7 +15,7 @@ export const Story = (args) => (
 		}}
 	>
 		<Canvas dpr={1}>
-			<OrthographicCamera makeDefault args={[-1, 1, 1, -1, 0, 1]} />
+			<OrthoCamera makeDefault args={[-1, 1, 1, -1, 0, 1]} />
 			<SDFShader {...args} />
 		</Canvas>
 	</div>

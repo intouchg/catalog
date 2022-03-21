@@ -1,4 +1,5 @@
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { NoisySphere } from './NoisySphere'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
@@ -16,6 +17,7 @@ export const Story: ComponentStory<typeof NoisySphere> = (args) => (
 		}}
 	>
 		<Canvas dpr={1}>
+			<OrbitControls makeDefault />
 			<ambientLight />
 			<NoisySphere {...args} />
 		</Canvas>
