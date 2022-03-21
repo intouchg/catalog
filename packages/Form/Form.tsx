@@ -98,7 +98,9 @@ export const Form = (props: React.ComponentProps<'form'>) => {
 					))}
 			</div>
 			<button type="submit">Submit</button>
-			<button type="reset">Reset</button>
+			<button type="reset" onClick={() => setErrors([])}>
+				Reset
+			</button>
 		</form>
 	)
 }

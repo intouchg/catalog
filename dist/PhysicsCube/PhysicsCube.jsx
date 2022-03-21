@@ -13,15 +13,21 @@ const useDragConstraint = (child) => {
 		maxForce: 1,
 	})
 	useEffect(() => void api.disable(), [])
-	const onPointerUp = useCallback((e) => {
-		e.target.releasePointerCapture(e.pointerId)
-		api.disable()
-	}, [])
-	const onPointerDown = useCallback((e) => {
-		e.stopPropagation()
-		e.target.setPointerCapture(e.pointerId)
-		api.enable()
-	}, [])
+	const onPointerUp = useCallback(
+		(e) => {
+			e.target.releasePointerCapture(e.pointerId)
+			api.disable()
+		},
+		[api]
+	)
+	const onPointerDown = useCallback(
+		(e) => {
+			e.stopPropagation()
+			e.target.setPointerCapture(e.pointerId)
+			api.enable()
+		},
+		[api]
+	)
 	return { onPointerDown, onPointerUp }
 }
 export const Cursor = () => {

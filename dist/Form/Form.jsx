@@ -89,7 +89,9 @@ export const Form = (props) => {
 					))}
 			</div>
 			<button type="submit">Submit</button>
-			<button type="reset">Reset</button>
+			<button type="reset" onClick={() => setErrors([])}>
+				Reset
+			</button>
 		</form>
 	)
 }

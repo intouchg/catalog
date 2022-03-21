@@ -16,16 +16,22 @@ const useDragConstraint = (child: RefObject<Object3D>) => {
 		pivotB: [0.3, 0.3, 0.3],
 		maxForce: 1,
 	})
-	useEffect(() => void api.disable(), [])
-	const onPointerUp = useCallback((e) => {
-		e.target.releasePointerCapture(e.pointerId)
-		api.disable()
-	}, [])
-	const onPointerDown = useCallback((e) => {
-		e.stopPropagation()
-		e.target.setPointerCapture(e.pointerId)
-		api.enable()
-	}, [])
+	useEffect(() => void api.disable(), [api])
+	const onPointerUp = useCallback(
+		(e) => {
+			e.target.releasePointerCapture(e.pointerId)
+			api.disable()
+		},
+		[api]
+	)
+	const onPointerDown = useCallback(
+		(e) => {
+			e.stopPropagation()
+			e.target.setPointerCapture(e.pointerId)
+			api.enable()
+		},
+		[api]
+	)
 	return { onPointerDown, onPointerUp }
 }
 
