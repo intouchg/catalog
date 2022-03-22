@@ -1,0 +1,11 @@
+{
+	"name": "DragList",
+	"version": "0.0.1",
+	"description": "Draggable list that allows reordering elements",
+	"devDependencies": {
+		"@use-gesture/react": "10.2.10"
+	},
+	"peerDependencies": {
+		"@use-gesture/react": "10.2.10"
+	}
+}

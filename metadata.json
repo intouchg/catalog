@@ -10,6 +10,11 @@
 		"description": "Combobox searchable dropdown using downshift"
 	},
 	{
+		"name": "DragList",
+		"version": "0.0.1",
+		"description": "Draggable list that allows reordering elements"
+	},
+	{
 		"name": "Form",
 		"version": "0.0.1",
 		"description": "Native form"

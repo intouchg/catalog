@@ -20,14 +20,13 @@ export default {
 export const Story: ComponentStory<typeof WarnOnLeave> = (args) => (
 	<div css={{ display: 'grid', rowGap: 8, maxWidth: 600 }}>
 		<p>
-			Attempting to navigate away from this site will present a &quot;Warn
-			on Leave&quot; modal.
+			Clicking a link to leave this site will show a &quot;Warn on
+			Leave&quot; modal unless the URL or hostname has been whitelisted.
+			For this example google.com is whitelisted.
 		</p>
-		<p>For this example google.com is whitelisted.</p>
-		<br />
-		<a href="https://facebook.com">Visit facebook.com</a>
+		<a href="https://facebook.com">Go to facebook.com</a>
 		<a href="https://google.com" css={{ marginRight: 16 }}>
-			Visit google.com
+			Go to google.com
 		</a>
 		<WarnOnLeave {...args} />
 	</div>

@@ -41,11 +41,13 @@ export const Combobox = ({
 }: {
 	data: Record<string, any>[]
 	nameKey: string
-	placeholder: string
+	placeholder?: string
 	inputId?: string
 	labelId?: string
 	toggleButtonAriaLabel: (isOpen: boolean) => string
-	onSelect: (selectedItemData: Record<string, any> | null | undefined) => void
+	onSelect?: (
+		selectedItemData: Record<string, any> | null | undefined
+	) => void
 	onInputValueChange?: () => void
 }) => {
 	const [inputItems, setInputItems] = useState(
@@ -94,7 +96,8 @@ export const Combobox = ({
 				}
 			}
 		},
-		onSelectedItemChange: (event) => onSelect(event.selectedItem),
+		onSelectedItemChange: (event) =>
+			void (onSelect && onSelect(event.selectedItem)),
 	})
 	const [translateSpring] = useSpring(
 		{

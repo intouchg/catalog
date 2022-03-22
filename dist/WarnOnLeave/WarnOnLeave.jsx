@@ -64,7 +64,7 @@ export const WarnOnLeave = ({ urlWhitelist = [], hostnameWhitelist = [] }) => {
 		}
 		window.addEventListener('click', handleClick)
 		return () => window.removeEventListener('click', handleClick)
-	}, [open])
+	}, [open, hostnameWhitelist, urlWhitelist])
 	return (
 		<Modal open={open} setOpen={setOpen}>
 			<div

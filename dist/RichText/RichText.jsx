@@ -8,6 +8,7 @@ import Subscript from '@tiptap/extension-subscript'
 import Superscript from '@tiptap/extension-superscript'
 export const RichTextMenuButton = ({ active, ...props }) => (
 	<button
+		{...props}
 		css={{
 			display: 'flex',
 			alignItems: 'center',
@@ -19,7 +20,6 @@ export const RichTextMenuButton = ({ active, ...props }) => (
 			background: active ? 'orange' : 'transparent',
 			border: '1px solid grey',
 		}}
-		{...props}
 	/>
 )
 export const RichTextMenu = ({ editor, onClear, ...props }) => {
@@ -90,16 +90,18 @@ export const RichTextMenu = ({ editor, onClear, ...props }) => {
 			>
 				⋮
 			</RichTextMenuButton>
-			<RichTextMenuButton
-				css={{ width: 'auto', marginLeft: 'auto', marginRight: 0 }}
-				active={false}
+			<button
+				css={{
+					marginLeft: 'auto',
+					padding: 8,
+				}}
 				onClick={() => {
 					editor.chain().clearContent().run()
 					if (onClear) onClear()
 				}}
 			>
 				Reset
-			</RichTextMenuButton>
+			</button>
 		</div>
 	)
 }

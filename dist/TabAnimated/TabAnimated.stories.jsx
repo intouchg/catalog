@@ -17,7 +17,7 @@ export default {
 	},
 }
 export const Story = (args) => (
-	<div css={{ padding: 16, maxWidth: 800 }}>
+	<div css={{ padding: 16, maxWidth: 800, minHeight: 160 }}>
 		<Trigger {...args}>
 			<div css={{ marginBottom: 16 }}>
 				<TabAnimatedTitle id="1">Tab 1</TabAnimatedTitle>

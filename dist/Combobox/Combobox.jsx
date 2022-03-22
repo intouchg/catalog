@@ -73,7 +73,8 @@ export const Combobox = ({
 				}
 			}
 		},
-		onSelectedItemChange: (event) => onSelect(event.selectedItem),
+		onSelectedItemChange: (event) =>
+			void (onSelect && onSelect(event.selectedItem)),
 	})
 	const [translateSpring] = useSpring(
 		{

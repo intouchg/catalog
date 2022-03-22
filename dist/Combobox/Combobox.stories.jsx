@@ -19,9 +19,11 @@ export const Story = (args) => (
 	<div
 		css={{
 			display: 'grid',
+			alignContent: 'start',
 			rowGap: 16,
 			width: '100%',
 			maxWidth: 640,
+			minHeight: 320,
 		}}
 	>
 		<label id="person-select-label" htmlFor="person-select-input">
@@ -47,8 +49,6 @@ export const Story = (args) => (
 			toggleButtonAriaLabel={(isOpen) =>
 				isOpen ? 'Close person list' : 'Open person list'
 			}
-			onSelect={(person) => console.log('Selected', person?.name)}
-			onInputValueChange={() => console.log('Changed')}
 			{...args}
 		/>
 	</div>

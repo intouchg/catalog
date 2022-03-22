@@ -13,6 +13,7 @@ export const RichTextMenuButton = ({
 	...props
 }: { active: boolean } & React.ComponentProps<'button'>) => (
 	<button
+		{...props}
 		css={{
 			display: 'flex',
 			alignItems: 'center',
@@ -24,7 +25,6 @@ export const RichTextMenuButton = ({
 			background: active ? 'orange' : 'transparent',
 			border: '1px solid grey',
 		}}
-		{...props}
 	/>
 )
 
@@ -104,16 +104,18 @@ export const RichTextMenu = ({
 			>
 				⋮
 			</RichTextMenuButton>
-			<RichTextMenuButton
-				css={{ width: 'auto', marginLeft: 'auto', marginRight: 0 }}
-				active={false}
+			<button
+				css={{
+					marginLeft: 'auto',
+					padding: 8,
+				}}
 				onClick={() => {
 					editor.chain().clearContent().run()
 					if (onClear) onClear()
 				}}
 			>
 				Reset
-			</RichTextMenuButton>
+			</button>
 		</div>
 	)
 }
