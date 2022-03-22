@@ -48,5 +48,10 @@
 		"name": "VideoPlayer",
 		"version": "0.0.1",
 		"description": "Video player using video.js"
+	},
+	{
+		"name": "WarnOnLeave",
+		"version": "0.0.1",
+		"description": "Warning modal when navigating away from the site"
 	}
 ]

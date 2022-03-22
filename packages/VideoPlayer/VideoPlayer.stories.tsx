@@ -31,14 +31,6 @@ export const Story: ComponentStory<typeof VideoPlayer> = (args) => (
 			]}
 			{...args}
 		/>
-		<a
-			href="https://docs.videojs.com/tutorial-options.html"
-			target="_blank"
-			rel="noreferrer"
-			css={{ display: 'block', marginTop: 16 }}
-		>
-			Video.js documentation
-		</a>
 	</div>
 )
 

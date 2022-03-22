@@ -27,14 +27,6 @@ export const Story = (args) => (
 			]}
 			{...args}
 		/>
-		<a
-			href="https://docs.videojs.com/tutorial-options.html"
-			target="_blank"
-			rel="noreferrer"
-			css={{ display: 'block', marginTop: 16 }}
-		>
-			Video.js documentation
-		</a>
 	</div>
 )
 Story.storyName = 'VideoPlayer'
