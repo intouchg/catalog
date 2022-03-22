@@ -1,0 +1,11 @@
+{
+	"name": "DoubleClickDrag",
+	"version": "0.0.1",
+	"description": "Click, drag, and double-click all on one element",
+	"devDependencies": {
+		"@use-gesture/react": "10.2.10"
+	},
+	"peerDependencies": {
+		"@use-gesture/react": "10.2.10"
+	}
+}

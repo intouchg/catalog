@@ -10,6 +10,11 @@
 		"description": "Combobox searchable dropdown using downshift"
 	},
 	{
+		"name": "DoubleClickDrag",
+		"version": "0.0.1",
+		"description": "Click, drag, and double-click all on one element"
+	},
+	{
 		"name": "DragList",
 		"version": "0.0.1",
 		"description": "Draggable list that allows reordering elements"
