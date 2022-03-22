@@ -5,6 +5,11 @@
 		"description": "Animated accordion"
 	},
 	{
+		"name": "Combobox",
+		"version": "0.0.1",
+		"description": "Combobox searchable dropdown using downshift"
+	},
+	{
 		"name": "Form",
 		"version": "0.0.1",
 		"description": "Native form"

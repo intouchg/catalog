@@ -1,0 +1,11 @@
+{
+	"name": "Combobox",
+	"version": "0.0.1",
+	"description": "Combobox searchable dropdown using downshift",
+	"devDependencies": {
+		"downshift": "6.1.7"
+	},
+	"peerDependencies": {
+		"downshift": "6.1.7"
+	}
+}

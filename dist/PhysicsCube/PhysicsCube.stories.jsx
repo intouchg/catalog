@@ -1,9 +1,22 @@
 import { Canvas } from '@react-three/fiber'
 import { Physics, useBox } from '@react-three/cannon'
 import { PhysicsCube, Cursor } from './PhysicsCube'
+const description = `
+This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers and physics via @react-three/cannon \n
+https://github.com/pmndrs/react-three-fiber \n
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction \n
+https://github.com/pmndrs/use-cannon/tree/master/packages/react-three-cannon
+`
 export default {
 	title: 'WebGL/PhysicsCube',
 	component: PhysicsCube,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 const Floor = ({ position }) => {
 	const [ref] = useBox(() => ({

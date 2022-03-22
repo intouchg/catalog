@@ -6,9 +6,22 @@ import {
 import { Trigger } from '@intouchg/components'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
+const description = `
+This component uses react-spring for physics-based easing \n
+https://github.com/pmndrs/react-spring \n
+https://react-spring.io/
+`
+
 export default {
 	title: 'Accordion',
 	component: Trigger,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 } as ComponentMeta<typeof Trigger>
 
 export const Story: ComponentStory<typeof Trigger> = (args) => (

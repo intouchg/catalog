@@ -1,7 +1,19 @@
 import { VideoPlayer } from './VideoPlayer'
+const description = `
+This component uses Video.js \n
+https://github.com/videojs/video.js \n
+https://docs.videojs.com/tutorial-options.html
+`
 export default {
 	title: 'VideoPlayer',
 	component: VideoPlayer,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>

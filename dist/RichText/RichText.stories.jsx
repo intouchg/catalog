@@ -1,7 +1,19 @@
 import { RichText } from './RichText'
+const description = `
+This component uses ProseMirror via @tiptap/react \n
+https://github.com/ueberdosis/tiptap \n
+https://tiptap.dev/
+`
 export default {
 	title: 'RichText',
 	component: RichText,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>

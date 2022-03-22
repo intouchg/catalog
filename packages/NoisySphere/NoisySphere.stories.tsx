@@ -3,9 +3,22 @@ import { OrbitControls } from '@react-three/drei'
 import { NoisySphere } from './NoisySphere'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
+const description = `
+This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers \n
+https://github.com/pmndrs/react-three-fiber \n
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+`
+
 export default {
 	title: 'WebGL/NoisySphere',
 	component: NoisySphere,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 } as ComponentMeta<typeof NoisySphere>
 
 export const Story: ComponentStory<typeof NoisySphere> = (args) => (

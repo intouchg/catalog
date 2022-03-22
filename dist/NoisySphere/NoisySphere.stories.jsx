@@ -1,9 +1,21 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NoisySphere } from './NoisySphere'
+const description = `
+This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers \n
+https://github.com/pmndrs/react-three-fiber \n
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+`
 export default {
 	title: 'WebGL/NoisySphere',
 	component: NoisySphere,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 export const Story = (args) => (
 	<div

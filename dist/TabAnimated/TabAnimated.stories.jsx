@@ -1,8 +1,20 @@
 import { TabAnimatedTitle, TabAnimatedContent } from './TabAnimated'
 import { Trigger } from '@intouchg/components'
+const description = `
+This component uses react-spring for physics-based easing \n
+https://github.com/pmndrs/react-spring \n
+https://react-spring.io/
+`
 export default {
 	title: 'TabAnimated',
 	component: Trigger,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 export const Story = (args) => (
 	<div css={{ padding: 16, maxWidth: 800 }}>

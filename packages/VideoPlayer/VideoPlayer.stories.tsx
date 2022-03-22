@@ -1,9 +1,22 @@
 import { VideoPlayer } from './VideoPlayer'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
+const description = `
+This component uses Video.js \n
+https://github.com/videojs/video.js \n
+https://docs.videojs.com/tutorial-options.html
+`
+
 export default {
 	title: 'VideoPlayer',
 	component: VideoPlayer,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 } as ComponentMeta<typeof VideoPlayer>
 
 export const Story: ComponentStory<typeof VideoPlayer> = (args) => (

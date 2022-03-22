@@ -1,10 +1,23 @@
 import { Canvas } from '@react-three/fiber'
 import { SDFShader } from './SDFShader'
 import { OrthographicCamera } from '@react-three/drei'
+const description = `
+This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers and WebGL shaders with signed distance functions / raymarching algorithms \n
+https://github.com/pmndrs/react-three-fiber \n
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction \n
+https://www.shadertoy.com/view/flcGDs#
+`
 const OrthoCamera = OrthographicCamera
 export default {
 	title: 'WebGL/SDFShader',
 	component: SDFShader,
+	parameters: {
+		docs: {
+			description: {
+				component: description,
+			},
+		},
+	},
 }
 export const Story = (args) => (
 	<div
