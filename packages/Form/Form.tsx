@@ -5,7 +5,19 @@ const Label = styled.label`
 	width: fit-content;
 `
 
-export const Form = (props: React.ComponentProps<'form'>) => {
+export const Form = ({
+	onSubmit,
+	onSubmitError,
+	onSubmitSuccess,
+	...props
+}: {
+	onSubmit?: (
+		formData: Record<string, FormDataEntryValue>,
+		errors: string[]
+	) => void
+	onSubmitError?: (errors: string[]) => void
+	onSubmitSuccess?: (formData: Record<string, FormDataEntryValue>) => void
+} & Omit<React.ComponentProps<'form'>, 'onSubmit'>) => {
 	const [errors, setErrors] = useState<string[]>([])
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -22,7 +34,6 @@ export const Form = (props: React.ComponentProps<'form'>) => {
 			{}
 		)
 
-		console.log('Submitted', formData)
 		const formErrors = []
 
 		if (!formData.firstName) {
@@ -36,10 +47,18 @@ export const Form = (props: React.ComponentProps<'form'>) => {
 		}
 
 		setErrors(formErrors)
+
+		if (onSubmit) onSubmit(formData, formErrors)
+		if (formErrors.length && onSubmitError) onSubmitError(formErrors)
+		if (!formErrors.length && onSubmitSuccess) onSubmitSuccess(formData)
 	}
 
 	return (
-		<form css={{ display: 'grid', rowGap: 16 }} onSubmit={handleSubmit}>
+		<form
+			css={{ display: 'grid', rowGap: 16 }}
+			onSubmit={handleSubmit}
+			{...props}
+		>
 			<input name="firstName" placeholder="First Name" />
 			<input name="lastName" placeholder="Last Name" />
 			<div>

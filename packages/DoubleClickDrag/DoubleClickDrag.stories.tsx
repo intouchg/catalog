@@ -33,6 +33,9 @@ export const Story: ComponentStory<typeof DoubleClickDrag> = (args) => (
 			justifyContent: 'center',
 		}}
 	>
+		<p css={{ position: 'absolute', bottom: 0 }}>
+			Try clicking, double clicking, and dragging the box above
+		</p>
 		<DoubleClickDrag {...args} />
 	</div>
 )

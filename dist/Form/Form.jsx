@@ -3,7 +3,12 @@ import { Checkbox, Radio, Toggle, Select, styled } from '@intouchg/components'
 const Label = styled.label`
 	width: fit-content;
 `
-export const Form = (props) => {
+export const Form = ({
+	onSubmit,
+	onSubmitError,
+	onSubmitSuccess,
+	...props
+}) => {
 	const [errors, setErrors] = useState([])
 	const handleSubmit = (event) => {
 		setErrors([])
@@ -16,7 +21,6 @@ export const Form = (props) => {
 			},
 			{}
 		)
-		console.log('Submitted', formData)
 		const formErrors = []
 		if (!formData.firstName) {
 			formErrors.push('Please enter your first name.')
@@ -28,9 +32,16 @@ export const Form = (props) => {
 			formErrors.push('You must accept the Privacy Policy.')
 		}
 		setErrors(formErrors)
+		if (onSubmit) onSubmit(formData, formErrors)
+		if (formErrors.length && onSubmitError) onSubmitError(formErrors)
+		if (!formErrors.length && onSubmitSuccess) onSubmitSuccess(formData)
 	}
 	return (
-		<form css={{ display: 'grid', rowGap: 16 }} onSubmit={handleSubmit}>
+		<form
+			css={{ display: 'grid', rowGap: 16 }}
+			onSubmit={handleSubmit}
+			{...props}
+		>
 			<input name="firstName" placeholder="First Name" />
 			<input name="lastName" placeholder="Last Name" />
 			<div>
