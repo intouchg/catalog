@@ -1,8 +1,11 @@
+const glob = require('glob')
+
 module.exports = {
 	stories: [
-		'../packages/**/*.stories.mdx',
-		'../packages/**/*.stories.@(js|jsx|ts|tsx)',
+		'../packages/*/*.stories.mdx',
+		'../packages/*/*.stories.@(js|jsx|ts|tsx)',
 	],
+	staticDirs: glob.sync(__dirname + '/../packages/*/public'),
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',

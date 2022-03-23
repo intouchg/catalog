@@ -15,18 +15,6 @@ export const parameters = {
 	},
 	docs: {
 		source: { type: 'code' },
-		// page: (props) => {
-		// 	const [] = useState()
-		// 	useEffect(() => {
-		// 		import('../packages/').then()
-		// 	}, [])
-		// 	return (
-		// 		<>
-		// 			<GlobalStyles />
-		// 			<div>Hello world</div>
-		// 		</>
-		// 	)
-		// },
 	},
 }
 

@@ -7,6 +7,7 @@ const description = `
 This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers and WebGL shaders with signed distance functions / raymarching algorithms \n
 https://github.com/pmndrs/react-three-fiber \n
 https://docs.pmnd.rs/react-three-fiber/getting-started/introduction \n
+https://github.com/pmndrs/drei \n
 https://www.shadertoy.com/view/flcGDs#
 `
 

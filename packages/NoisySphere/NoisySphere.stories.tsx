@@ -6,7 +6,8 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react'
 const description = `
 This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers \n
 https://github.com/pmndrs/react-three-fiber \n
-https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction \n
+https://github.com/pmndrs/drei
 `
 
 export default {

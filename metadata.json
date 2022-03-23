@@ -25,6 +25,11 @@
 		"description": "Native form"
 	},
 	{
+		"name": "ModelViewer",
+		"version": "0.0.1",
+		"description": "Simple 3d model viewer loading GLTF files"
+	},
+	{
 		"name": "NoisySphere",
 		"version": "0.0.1",
 		"description": "Displacing vertices on sphere geometry with perlin noise"

@@ -7,7 +7,8 @@ const description = `
 This component uses ThreeJS via @react-three/fiber and @react-three/drei helpers and physics via @react-three/cannon \n
 https://github.com/pmndrs/react-three-fiber \n
 https://docs.pmnd.rs/react-three-fiber/getting-started/introduction \n
-https://github.com/pmndrs/use-cannon/tree/master/packages/react-three-cannon
+https://github.com/pmndrs/use-cannon/tree/master/packages/react-three-cannon \n
+https://github.com/pmndrs/drei
 `
 
 export default {
