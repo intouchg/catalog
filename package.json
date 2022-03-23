@@ -1,6 +1,6 @@
 {
 	"name": "@intouchg/catalog",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "CLI and Storybook for exploring and downloading React components",
 	"repository": "https://github.com/intouchg/catalog",
 	"author": "Intouch Group",

@@ -139,6 +139,7 @@ export const DragList = ({
 						color: 'white',
 						fontSize: '1.25rem',
 						fontWeight: 'bold',
+						userSelect: 'none',
 					}}
 				>
 					{data[index][nameKey]}
