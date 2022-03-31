@@ -14,16 +14,16 @@ const useDragConstraint = (child) => {
 	})
 	useEffect(() => void api.disable(), [api])
 	const onPointerUp = useCallback(
-		(e) => {
-			e.target.releasePointerCapture(e.pointerId)
+		(event) => {
+			event.target.releasePointerCapture(event.pointerId)
 			api.disable()
 		},
 		[api]
 	)
 	const onPointerDown = useCallback(
-		(e) => {
-			e.stopPropagation()
-			e.target.setPointerCapture(e.pointerId)
+		(event) => {
+			event.stopPropagation()
+			event.target.setPointerCapture(event.pointerId)
 			api.enable()
 		},
 		[api]
